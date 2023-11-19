@@ -1,0 +1,47 @@
+
+  /* Estilo para el contenedor con una imagen */
+  .container-image {
+    width: 50%; /* Ancho del 50% del contenedor principal */
+    float: left; /* Espaciado entre elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Estilo para el contenedor con tres imágenes, texto y botones */
+  .container-content {
+    width: 50%; /* Ancho del 50% del contenedor principal */
+    display: flex; /* Utiliza flexbox para alinear elementos en columna */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 20px; /* Espaciado entre elementos */
+  }
+  
+  /* Estilo para cada imagen individual */
+  .image {
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+  
+  /* Estilo para el texto debajo de cada imagen */
+  .image p {
+    margin-top: 10px; /* Espaciado superior */
+  }
+  
+  /* Estilo para el contenedor de botones */
+  .container-buttons {
+    margin-top: auto; /* Empuja los botones hacia la parte inferior del contenedor */
+  }
+  
+  /* Estilo para los botones de inicio de sesión y registro */
+  .btn-login, .btn-register, .btn-contactanos {
+    margin: 0 10px; /* Espaciado horizontal entre botones */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 50%; /* Hace que el botón tenga bordes redondeados */
+    padding: 10px 20px; /* Ajusta el espaciado interior para el contenido del botón */
+    cursor: pointer;
+    background-color: #a32c68;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+  }
+  

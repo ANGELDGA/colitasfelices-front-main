@@ -1,0 +1,33 @@
+.donation-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8%;
+  }
+  
+  .donation-image {
+    flex: 1;
+  }
+  
+  .donation-options {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .qr-code {
+    flex: 1;
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+  }
+  
+  .btn-donar {
+    margin: 0 10px; /* Espaciado horizontal entre botones */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 50%; /* Hace que el botón tenga bordes redondeados */
+    padding: 10px 20px; /* Ajusta el espaciado interior para el contenido del botón */
+    cursor: pointer;
+    background-color: #a32c68;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+  }

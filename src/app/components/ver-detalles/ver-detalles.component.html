@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Detalles de las mascotas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- ... (código de navegación) ... -->
+</nav>
+
+<div class="container mt-5">
+  <div class="text-center">
+    <h2 class="text-primary">Detalles Importantes</h2>
+  </div>
+
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="user-details-container p-4 rounded shadow" style="border: 2px solid #007BFF;">
+        <div *ngIf="user">
+          <p><strong>UBICACION:</strong> {{ user.ubicacion }}</p>
+          <p><strong>ESTADO:</strong> {{ user.estado }}</p>
+          <p><strong>CONTACTOS:</strong> {{ user.contactos }}</p>
+          <p><strong>FECHA DE DESAPARICION:</strong> {{ user.fechaDesaparicion }}</p>
+
+
+          <!-- Agrega más campos de usuario según tus necesidades -->
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a class="btn btn-primary" href="/">Volver a Inicio</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

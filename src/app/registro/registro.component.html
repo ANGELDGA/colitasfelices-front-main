@@ -1,0 +1,105 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="centered-form" style="width: 85%;text-align: center;padding: 24px;margin: 12px;">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" formControlName="nombre">
+                <div *ngIf="submitted && userForm.get('nombre')?.hasError('required')" class="text-danger">
+                    El nombre es obligatorio.
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <input type="text" id="apellidoPaterno" formControlName="apellidoPaterno">
+                <div *ngIf="submitted && userForm.get('apellidoPaterno')?.hasError('required')" class="text-danger">
+                    El Apellido Paterno es obligatorio.
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <input type="text" id="apellidoMaterno" formControlName="apellidoMaterno">
+                <div *ngIf="submitted && userForm.get('apellidoMaterno')?.hasError('required')" class="text-danger">
+                    El Apellido Materno es obligatorio.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" formControlName="email">
+                <div *ngIf="submitted && userForm.get('email')?.hasError('required')" class="text-danger">
+                    El email es obligatorio.
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" formControlName="password">
+                <div *ngIf="submitted && userForm.get('password')?.hasError('required')" class="text-danger">
+                    El password es obligatorio.
+                </div>
+                <div *ngIf="userForm.get('password')?.hasError('minlength')">
+                    La contraseña debe tener al menos 6 caracteres.
+                  </div>
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <input type="text" id="sexo" formControlName="sexo">
+                <div *ngIf="submitted && userForm.get('sexo')?.hasError('required')" class="text-danger">
+                    El sexo es obligatorio.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="text" id="fechaNacimiento" formControlName="fechaNacimiento">
+                <div *ngIf="submitted && userForm.get('fechaNacimiento')?.hasError('required')" class="text-danger">
+                    La Fecha de Nacimiento es obligatorio.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cantidadMascota">Cantidad Mascotas:</label>
+                <input type="number" id="cantidadMascota" formControlName="cantidadMascota">
+                <div *ngIf="userForm.get('cantidadMascota')?.hasError('min')">
+                    La cantidad de mascotas debe ser mayor que 0.
+                  </div>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" formControlName="telefono">
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="distrito">Distrito:</label>
+                <input type="text" id="distrito" formControlName="distrito">
+            </div>
+            <div class="form-group">
+                <label for="provincia">Provincia:</label>
+                <input type="text" id="provincia" formControlName="provincia">
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" formControlName="departamento">
+            </div>
+            <div class="form-group">
+                <label for="pais">Pais:       </label>
+                <input type="text" id="pais" formControlName="pais">
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <button type="submit" class="btn-register">Registrar</button>
+  </form>

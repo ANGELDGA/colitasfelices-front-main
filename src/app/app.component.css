@@ -1,0 +1,29 @@
+nav {
+    display: flex; /* Utiliza un contenedor flexible para los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos en el contenedor */
+    background: #f2b9e1;
+    font-weight: bold;
+    font-size: 20px;
+
+    width: 80%; /* Ancho del 80% del tamaño de la ventana del navegador */
+    margin: 0 auto; /* Centra horizontalmente */
+    border-radius: 40px; /* Bordes redondeados de 10px */
+    padding: 10px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+  }  
+  
+  ul {
+    list-style: none; /* Quita los marcadores de lista */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+  }
+  
+  li {
+    margin: 0 10px; /* Agrega un margen horizontal entre los elementos */
+  }
+  
+ 

@@ -1,0 +1,23 @@
+.login-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+    position: absolute;
+    top: 40%; /* Lo desplaza hacia abajo al 50% de la ventana */
+    left: 50%; /* Lo desplaza hacia la derecha al 50% de la ventana */
+    transform: translate(-50%, -50%); /* Lo ajusta para centrarlo en el medio */
+  }
+  
+  .formLogin{
+    margin: 10%;
+  }
+
+  .loginButton{
+    margin: 10%;
+    border: none; /* Elimina el borde del botón */
+    border-radius: 50%; /* Hace que el botón tenga bordes redondeados */
+    padding: 10px 20px; /* Ajusta el espaciado interior para el contenido del botón */
+    cursor: pointer;
+    background-color: #a32c68;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+  }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+
+</head>
+
+
+<body>
+  <nav class="navbar navbar-dark"    style="background-color: #060608;">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+
+
+        <img src="assets/img1.jpeg" alt="Mi Imagen" width="80" height="60" class="d-inline-block align-top">
+        Bienvenido a Colitas Perdidas
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/add">Registrar PEATS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Main Content -->
+<div class="mt-5 text-center">
+  <h1 class="color-heading">Control de Mascotas / Perdidas-Encontadas </h1>
+  <div class="d-flex justify-content-center my-3">
+    <input  type="text" [(ngModel)]="filterValue" placeholder="Filter " (keyup.enter)="filterUsers()">
+    <button type="button" (click)="filterUsers()" class="btn btn-primary ml-2">Buscar</button>
+  </div>
+
+  <div class="container content-left"> <!-- Agregamos la clase "content-left" aquí -->
+    <!-- Add User Button -->
+    <div class="my-3">
+      <a href="/add" class="btn btn-primary">Registrar Mascotas</a>
+    </div>
+
+    <table class="table table-bordered table-ligth">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">TIPO</th>
+          <th scope="col">RAZA</th>
+          <th scope="col">UBICACION</th>
+          <th scope="col">DESCRIPCION</th>
+          <th scope="col">IMAGEN</th>
+          <th scope="col">FECHA</th>
+          <th scope="col">ESTADO</th>
+          <th scope="col">CONTACTOS</th>
+          <th scope="col">ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.tipo}}</td>
+          <td>{{user.raza}}</td>
+          <td>{{user.ubicacion}}</td>
+          <td>{{user.descripcion}}</td>
+          <td>
+            <img [src]="'assets/' + user.imagenPath" alt="Imagen" width="390" height="250">
+          </td>
+          <td>{{user.fechaDesaparicion}}</td>
+          <td>{{user.estado}}</td>
+          <td>{{user.contactos}}</td>
+          <td>
+            <div class="text-center">
+              <button class="btn btn-success mb-2" (click)="updateUser(user.id)" type="button">Actualizar</button>
+              <button class="btn btn-info " (click)="verDetalles(user.id)" type="button">Detalles</button>
+
+              <button class="btn btn-danger" (click)="deleteUser(user.id)" type="button">Eliminar</button>
+
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer>
+  <div id="mapa-container" style="text-align: center; border: 0px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1.87!1m14!1m8!1m3!1d159154.62334652655!2d-77.03902124999999!3d-12.0500439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c70515e9744f%3A0x8fd1d2614ca23109!2sLima%2C%20Peru!5e0!3m2!1ses!2ses" width="1300" height="350" frameborder="0" style="border:0; margin: 0 auto;" allowfullscreen></iframe>
+  </div>
+</footer>
+<footer class="footer">
+  <div class="container bottom_border">
+      <div class="row">
+
+          <div class=" col-sm-4 col-md  col-12 col">
+
+
+          </div>
+      </div>
+  </div>
+
+
+  <div class="container">
+
+      <p class="text-center">Copyright @2023 | Designed With by <a href="#">Your Company Name</a></p>
+
+
+
+  </div>
+
+</footer>
+</body>
+</html>
+
+<router-outlet></router-outlet>

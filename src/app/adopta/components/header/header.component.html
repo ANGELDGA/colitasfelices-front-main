@@ -1,0 +1,56 @@
+<!--Main Content-->
+<div class="my-5">
+  <div class="mx-auto w-25 " style="max-width:100%;">
+    <h2 class="text-center mb-3 color-heading">Mascotas</h2>
+    <form action="" [formGroup]="formularioRegister">
+      <!--name-->
+      <div class="row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="name" class="form-label">NOMBRE:</label>
+          <input pInputText placeholder="Nombre mascota" formControlName="name" />
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="tipo" class="form-label">CATEGORIA:</label>
+          <input  pInputText placeholder="Categoria" formControlName="categoryName" />
+        </div>
+      </div>
+
+      <!--Email-->
+      <div class="row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="raza" class="form-label">RAZA DE LA MASCOTA:</label>
+          <input  pInputText placeholder="Raza" formControlName="raza" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="descripcion" class="form-label">DESCRIPCION:</label>
+          <input  pInputText placeholder="Descripción" formControlName="information" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="imagenPath" class="form-label">IMAGEN:</label>
+          <input  pInputText placeholder="Foto" formControlName="img" />
+        </div>
+      </div>
+
+      <div>
+        <button pButton pRipple label="Submit" class="p-button-success" label="Crear" (click)="crearRegister()"></button>
+    </div>
+
+      <div>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: #fff0e5e0!important;
+  }
+ /* Estilos generales del formulario */
+ form {
+  background-color: #65e5a3; /* Color de fondo del formulario */
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para etiquetas (labels) */
+form label {
+  font-weight: bold;
+}
+
+
+/* Estilos para los campos de entrada de texto */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de envío */
+form input[type="submit"] {
+  background-color: #4d83bd; /* Color de fondo del botón */
+  color: #082c1d; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para el botón de envío al pasar el mouse sobre él */
+form input[type="submit"]:hover {
+  background-color: #280c7e; /* Color de fondo del botón al pasar el mouse sobre él */
+}
+
+.button-container {
+  text-align: center;
+
+}
+
+.button-container button {
+  margin-bottom: 30px; /* Ajusta el valor según tu preferencia */
+}
+.color-heading {
+  color: #FF5733; /* Cambia este valor al color que desees */
+}
+/* Estilo personalizado para alinear el contenido a la izquierda */
+.content-left {
+  text-align: left;
+  margin: 55 auto; /* Esto mantiene el contenido centrado horizontalmente */
+  max-width: 10000px; /* Ajusta el ancho máximo del contenido según tu preferencia */
+}
+
+
+/* Estilos para el botón de filtro */
+.btn-filter {
+background-color: #05090d;
+color: #800b0b;
+}
+
+/* Estilos para la tabla */
+.table {
+background-color: #307ac5;
+text-align: center;
+}
+
+/* Estilos para la imagen en la tabla */
+.table img {
+
+max-width: 300px; /* Establece un ancho máximo de 100px */
+max-height: 115px; /* Establece una altura máxima de 75px */
+}
+
+/* Estilos para los botones de acción */
+.btn-action {
+margin: 0 5px;
+}
+
+/* Estilos para el pie de página */
+footer {
+background-color: #12252b;
+color: #fff;
+text-align: center;
+padding: 10px 0;
+}
+
+.navbar {
+background-color: #2f2f2f; /* Cambia el color de fondo a tu preferencia */
+}
+/* Estilos para el campo de entrada de texto */
+input[type="text"] {
+padding: 10px; /* Añade relleno alrededor del campo */
+border: 1px solid #2cff10; /* Establece un borde con color */
+border-radius: 40px; /* Agrega esquinas redondeadas */
+width: 200px; /* Establece un ancho fijo o ajusta según tus necesidades */
+font-size: 16px; /* Tamaño de fuente */
+color: #4c225b; /* Color del texto */
+}
+
+/* Estilos para el texto de marcador de posición (placeholder) */
+input[type="text"]::placeholder {
+color: #741515; /* Color del texto de marcador de posición */
+font-style: italic; /* Establece el estilo del marcador de posición */
+}
+
+/* Estilos para el campo de entrada de texto en estado de enfoque (cuando se hace clic en él) */
+input[type="text"]:focus {
+border-color: #031426; /* Cambia el color del borde al hacer clic en el campo */
+}

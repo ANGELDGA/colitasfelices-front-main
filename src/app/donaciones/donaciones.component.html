@@ -1,0 +1,24 @@
+
+<div class="donation-container" *ngIf="!this.mostrarConfirmacion" >
+    <div class="donation-image">
+      <img src="../assets/mascota.jpeg" alt="Mascota" width="100%">
+    </div>
+    <div class="donation-options">
+      <h2>Elige el monto a donar:</h2>
+      <div *ngFor="let amount of donationAmounts">
+        <button class="btn-donar" (click)="makePayment(amount)">s/ {{ amount }}</button>
+      </div>
+      <div>
+        <input type="number" [(ngModel)]="customAmount" placeholder="Otro" style="width: 22%"/>
+        <button class="btn-donar" (click)="donateCustomAmount()" [disabled]="customAmount === null || customAmount <= 0">Donar</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="qr-code" *ngIf="this.mostrarConfirmacion">
+    <img src="../assets/donatethanks2.jpg" alt="QR">
+    <br>
+    <br>
+    <br>
+    <span>Gracias por tu apoyo <strong></strong> </span>
+  </div>

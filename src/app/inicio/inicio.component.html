@@ -1,0 +1,40 @@
+<div class="container">
+    <!-- <h2>Colitas Felices</h2> -->
+    <carousel>
+      <slide *ngFor="let mascota of mascotas">
+        <img [src]="mascota.imagenUrl" alt="{{ mascota.nombre }}">
+        <div class="carousel-caption">
+          <!-- <h3>{{ mascota.nombre }}</h3> -->
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  <div class="container-image">
+    <!-- Contenedor con una imagen -->
+    <h2>Estudiantes y Asociados</h2>
+    <img src="../assets/colitas.jpg" alt="Imagen">
+    <button class="btn-contactanos" routerLink="/contactanos" >Contactanos</button>
+  </div>
+
+  <div class="container-content">
+    <!-- Contenedor con tres imágenes y texto -->
+    <div class="image">
+      <img src="../assets/mascotas.jpg" alt="Imagen 1">
+      <p>Somos una red social que permite a los usuarios crear perfiles para sus mascotas, compartir fotos, historias y consejos de cuidado.</p>
+    </div>
+    <!-- <div class="image">
+      <img src="imagen2.jpg" alt="Imagen 2">
+      <p>Texto 2</p>
+    </div>
+    <div class="image">
+      <img src="imagen3.jpg" alt="Imagen 3">
+      <p>Texto 3</p>
+    </div> -->
+    <button class="btn-login" routerLink="/login" >Iniciar sesión</button>
+    <button class="btn-register" routerLink="/registro" >Registrarse</button>
+  </div>
+
+  <!-- <div class="container-buttons">
+    <button class="btn-login">Iniciar sesión</button>
+    <button class="btn-register">Registrarse</button>
+  </div> -->
