@@ -9,5 +9,20 @@
 </head>
 <body>
   <app-root></app-root>
+  <!--poner el codigo del bot-->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "e4b5e259-66ff-4b03-89bc-a6b390ca6fcb", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "4ce895f8-835d-4237-82f6-09548f6d84bd", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
 </body>
 </html>
