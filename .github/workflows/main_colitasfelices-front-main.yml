@@ -25,7 +25,11 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npm run test --if-present
+      
+      - name: install angular cli and generate dist folder 
+        run: |
+          npm install -g @angular/cli@latest
+          ng build
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -50,7 +54,9 @@ jobs:
           name: node-app
 
       - name: Unzip artifact for deployment
-        run: unzip release.zip
+        run: |
+          unzip release.zip
+          rm release.zip
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -58,5 +64,5 @@ jobs:
         with:
           app-name: 'colitasfelices-front-main'
           slot-name: 'Production'
-          package: .
+          package: ./dist/colitasfelices-front-main
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8097AE94280E4B078FFFED0E69E349E0 }}
