@@ -8,7 +8,9 @@ import { Pets } from './Pets';
 })
 export class AppService {
 //http://localhost:8080
-  private url = "http://localhost:8080/api/v1/pets/";
+  //private url = "http://localhost:8080/api/v1/pets/";
+
+  private url = "https://peats2023.azurewebsites.net/api/v1/pets/";
 
   constructor(private http: HttpClient) { }
 

@@ -7,7 +7,9 @@ import { Register } from '../modells/Register';
 })
 export class RegisterService {
 
-  rutaGlobal = 'http://localhost:8082/Adopt/'
+  //rutaGlobal = 'http://localhost:8082/Adopt/'
+
+  rutaGlobal = 'https://apiadoptar.azurewebsites.net/Adopt/'
 
   constructor(private http: HttpClient) { }
 

@@ -7,8 +7,11 @@ import { Donation } from '../modells/Donation';
 })
 export class DonationService {
 
-  rutaGlobal = 'http://localhost:8083/Donation/'
+ // rutaGlobal = 'http://localhost:8083/Donation/'
 
+  rutaGlobal =  'https://apidonation.azurewebsites.net/Donation/'
+  
+  
   constructor(private http: HttpClient) { }
 
   //registrar
